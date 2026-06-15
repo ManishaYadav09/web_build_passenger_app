@@ -31815,18 +31815,22 @@ blS(a,b){var s,r,q,p,o,n,m=t.Xw.a(b.w)
 if(m==null){s=t.z
 m=A.r(s,s)}s=J.a6(m)
 r=A.kR(s.h(m,"fromActiveOrder"))
-q=b.b.gnT().h(0,"api_url")
-if(q==null)q=""
-p=s.h(m,"order_pnr")
-A.bH(p==null?"":p)
-p=s.h(m,"restaurant_name")
-p=A.bH(p==null?"":p)
+q=r===!0
+p=b.b.gnT().h(0,"api_url")
+if(p==null)p=""
+if(!q)r=p.length===0
+else r=!1
+if(r)p="https://jpsb-rms.ticketsimply.co.in/rms_shortened_url/3BAWIvySNpKP"
+r=s.h(m,"order_pnr")
+A.bH(r==null?"":r)
+r=s.h(m,"restaurant_name")
+r=A.bH(r==null?"":r)
 o=s.h(m,"route_text")
 o=A.bH(o==null?"":o)
 n=s.h(m,"items_summary")
 n=A.bH(n==null?"":n)
 s=s.h(m,"order_date_time")
-return new A.xj(p,o,n,A.bH(s==null?"":s),r===!0,q,null)},
+return new A.xj(r,o,n,A.bH(s==null?"":s),q,p,null)},
 xj:function xj(a,b,c,d,e,f,g){var _=this
 _.e=a
 _.f=b
@@ -32044,20 +32048,21 @@ l=k}q.aaD(new A.D8(n,B.Xy,m,l,null))
 q.SH()
 return A.w(null,r)}})
 return A.x($async$aX_,r)},
-Sg(){var s=0,r=A.y(t.H),q=1,p=[],o,n
+Sg(){var s=0,r=A.y(t.H),q=1,p=[],o,n,m
 var $async$Sg=A.z(function(a,b){if(a===1){p.push(b)
 s=q}for(;;)switch(s){case 0:q=3
 s=6
 return A.m(A.aAb(),$async$Sg)
-case 6:s=7
-return A.m(A.My(null),$async$Sg)
+case 6:o="https://restaurantsimply.com/web_build_passenger_app?api_url=https%3A%2F%2Fjpsb-rms.ticketsimply.co.in%2Frms_shortened_url%2FGVmHDlIRI3aI"
+s=7
+return A.m(A.My(o),$async$Sg)
 case 7:s=8
 return A.m($.b1D().fN(0),$async$Sg)
 case 8:q=1
 s=5
 break
 case 3:q=2
-n=p.pop()
+m=p.pop()
 s=5
 break
 case 2:s=1
@@ -111803,7 +111808,7 @@ a9(){return new A.a6P()}}
 A.a6P.prototype={
 ap(){this.aH()},
 J(a){var s=null,r=this.gb8().bB($.bfw(),t.aq)
-return new A.B9($.bfv(),r,new A.aMk(),"Passenger App",A.CV(B.F2,s,s,B.jh,s),!1,s)}}
+return new A.B9($.bfv(),r,new A.aMk(),"Passenger App",A.CV(B.F2,s,s,B.jh,s),!0,s)}}
 A.aMk.prototype={
 $2(a,b){b.toString
 return new A.Kl(b,A.b([B.GC,B.GD,B.GE,B.GF],t.At),null,null,!1,!1,null)},
