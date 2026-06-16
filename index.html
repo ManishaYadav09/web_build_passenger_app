@@ -114,6 +114,24 @@
       }
     }
   </style>
+
+  <!-- Block iOS Safari/Chrome native edge-swipe back to prevent Flutter route flicker -->
+  <script>
+    document.addEventListener(
+      'touchstart',
+      function (e) {
+        if (e.touches.length !== 1) return;
+
+        const touch = e.touches[0];
+
+        // Block iOS edge swipe navigation
+        if (touch.clientX < 20) {
+          e.preventDefault();
+        }
+      },
+      { passive: false }
+    );
+  </script>
 </head>
 <body>
   <!-- Splash screen shown while Flutter loads -->
